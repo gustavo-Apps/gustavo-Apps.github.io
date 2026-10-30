@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gustavo Rossato Gomes | QA</title>
+<meta name="description" content="Analista de QA: testes manuais, API e automação E2E com Playwright.">
+<style>
+:root{--bg:#0f1419;--card:#171e26;--text:#e6edf3;--muted:#9aa7b4;--accent:#3fb68b;--line:#27313c}
+@media (prefers-color-scheme:light){:root{--bg:#f7f9fb;--card:#fff;--text:#15202b;--muted:#5b6b7a;--accent:#0f8a63;--line:#e1e7ed}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+html[data-lang="en"] [data-l="pt"],html[data-lang="pt"] [data-l="en"]{display:none}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{max-width:900px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.logo{font-weight:700;color:var(--text)}
+.links{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.links a{color:var(--muted);font-size:.92rem}.links a:hover{color:var(--text);text-decoration:none}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--muted);padding:5px 12px;font:inherit;font-size:.85rem;cursor:pointer}
+html[data-lang="pt"] .lang [data-set="pt"],html[data-lang="en"] .lang [data-set="en"]{background:var(--accent);color:#fff}
+main{max-width:900px;margin:0 auto;padding:0 20px 60px}
+.hero{padding:72px 0 40px}
+.hero h1{font-size:clamp(2rem,6vw,3.2rem);margin:0 0 6px;line-height:1.15}
+.role{color:var(--accent);font-weight:600;font-size:1.1rem;margin:0 0 18px}
+.hero p{max-width:680px;color:var(--muted);font-size:1.05rem}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{padding:9px 18px;border-radius:8px;border:1px solid var(--line);color:var(--text);font-weight:600;font-size:.95rem}
+.btn.p{background:var(--accent);border-color:var(--accent);color:#fff}.btn:hover{text-decoration:none;opacity:.9}
+section{padding-top:48px}
+h2{font-size:1.4rem;margin:0 0 18px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 18px}
+.chips span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:.88rem}
+h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:18px 0 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.card h4{margin:0 0 8px;font-size:1.05rem}
+.card ul{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:.93rem}
+.card p{margin:0;color:var(--muted);font-size:.93rem}
+.tl{border-left:2px solid var(--line);padding-left:18px;margin:0}
+.tl b{display:block}.tl small{color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 20px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<nav><div class="bar">
+  <span class="logo">Gustavo R. Gomes</span>
+  <div class="links">
+    <a href="#about"><span data-l="pt">Sobre</span><span data-l="en">About</span></a>
+    <a href="#skills">Skills</a>
+    <a href="#projects"><span data-l="pt">Projetos</span><span data-l="en">Projects</span></a>
+    <a href="#learning"><span data-l="pt">Aprendizados</span><span data-l="en">Learning</span></a>
+    <a href="#contact"><span data-l="pt">Contato</span><span data-l="en">Contact</span></a>
+    <div class="lang" role="group" aria-label="Language"><button data-set="pt">PT</button><button data-set="en">EN</button></div>
+  </div>
+</div></nav>
+
+<main>
+<header class="hero" id="top">
+  <h1>Gustavo Rossato Gomes</h1>
+  <p class="role"><span data-l="pt">Analista de QA | Testes Manuais, API e Automação E2E</span><span data-l="en">QA Analyst | Manual, API and E2E Automation Testing</span></p>
+  <p data-l="pt">Valido regras de negócio em sistemas desktop e web, testo APIs e integrações e trabalho com automação E2E em Playwright. Gosto de entender o fluxo completo, do requisito ao endpoint, para reportar bugs com contexto real.</p>
+  <p data-l="en">I validate business rules in desktop and web systems, test APIs and integrations, and work with E2E automation in Playwright. I like understanding the full flow, from requirement to endpoint, so I can report bugs with real context.</p>
+  <div class="cta">
+    <a class="btn p" href="https://www.linkedin.com/in/gustavo-r-gomes-40487a275">LinkedIn</a>
+    <a class="btn" href="https://github.com/gustavo-Apps">GitHub</a>
+  </div>
+</header>
+
+<section id="about">
+  <h2><span data-l="pt">Sobre mim</span><span data-l="en">About me</span></h2>
+  <p data-l="pt">Sou analista de QA na <b>Appelsoft</b> desde dezembro de 2024 e curso <b>Ciência da Computação na Unicruz</b> (previsão de conclusão: 2º semestre de 2027). Desde o início do ano trabalho com Playwright e CI no GitHub, e nos últimos meses venho implementando automação em um ERP web empresarial. Uso IA no dia a dia para analisar tickets e gerar casos de teste, sempre revisando o resultado, e valido entregas com código gerado por IA, onde a checagem humana da regra de negócio faz diferença.</p>
+  <p data-l="en">I’m a QA Analyst at <b>Appelsoft</b> since December 2024 and I’m studying <b>Computer Science at Unicruz</b> (expected completion: 2nd semester of 2027). Since the beginning of the year I’ve been working with Playwright and CI on GitHub, and for the past few months I’ve been implementing automation in an enterprise ERP web system. I use AI daily to analyze tickets and generate test cases, always reviewing the output, and I validate deliveries with AI-generated code, where human checking of business rules makes a difference.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <h3><span data-l="pt">QA e Testes</span><span data-l="en">QA & Testing</span></h3>
+  <div class="chips">
+    <span data-l="pt">Testes manuais funcionais</span><span data-l="en">Functional manual testing</span>
+    <span data-l="pt">Testes de API</span><span data-l="en">API testing</span>
+    <span data-l="pt">Testes de integração</span><span data-l="en">Integration testing</span>
+    <span data-l="pt">Testes de regressão</span><span data-l="en">Regression testing</span>
+    <span data-l="pt">Automação E2E</span><span data-l="en">E2E automation</span>
+    <span data-l="pt">Casos de teste</span><span data-l="en">Test cases</span>
+    <span data-l="pt">Validação de código gerado por IA</span><span data-l="en">AI-generated code validation</span>
+  </div>
+  <h3><span data-l="pt">Ferramentas</span><span data-l="en">Tools</span></h3>
+  <div class="chips"><span>Playwright</span><span>GitHub Actions (CI)</span><span>Postman</span><span>Insomnia</span><span>Azure DevOps</span><span>SQL / MySQL</span></div>
+  <h3><span data-l="pt">Desenvolvimento (projetos pessoais)</span><span data-l="en">Development (personal projects)</span></h3>
+  <div class="chips"><span>Node.js</span><span>Express</span><span>React</span><span>Vite</span><span>Tailwind</span><span>C#</span></div>
+</section>
+
+<section id="projects">
+  <h2><span data-l="pt">Projetos</span><span data-l="en">Projects</span></h2>
+  <div class="grid">
+    <article class="card">
+      <h4><a href="https://github.com/gustavo-Apps/task-manager">Task Manager</a></h4>
+      <p data-l="pt">Sistema full-stack de registro de atividades semanais.</p>
+      <p data-l="en">Full-stack weekly activity logging system.</p>
+      <ul data-l="pt"><li>Node.js/Express, Sequelize/MySQL, React, Vite e Tailwind</li><li>Autenticação JWT e painel administrativo</li><li>Integração com Azure DevOps</li><li>Relatórios em PDF e Markdown, com perfil para Analista de Testes</li><li>Testes E2E com Playwright e CI no GitHub Actions</li></ul>
+      <ul data-l="en"><li>Node.js/Express, Sequelize/MySQL, React, Vite and Tailwind</li><li>JWT authentication and admin panel</li><li>Azure DevOps integration</li><li>PDF and Markdown reports, with a Test Analyst profile</li><li>E2E tests with Playwright and CI on GitHub Actions</li></ul>
+    </article>
+    <article class="card">
+      <h4>Sabor Local</h4>
+      <p data-l="pt">Plataforma de pedidos online no estilo iFood para pequenas empresas, criada para praticar tecnologia e testes.</p>
+      <p data-l="en">An iFood-style online ordering platform for small businesses, built to practice technology and testing.</p>
+      <ul data-l="pt"><li>Testes automatizados E2E com Playwright</li></ul>
+      <ul data-l="en"><li>Automated E2E tests with Playwright</li></ul>
+    </article>
+    <article class="card">
+      <h4><span data-l="pt">Estudos em C#</span><span data-l="en">C# studies</span></h4>
+      <p data-l="pt">Repositórios de estudo de cursos da Alura.</p>
+      <p data-l="en">Study repositories from Alura courses.</p>
+      <ul><li><a href="https://github.com/gustavo-Apps/ScreenSound-Project-Alura">ScreenSound</a></li><li><a href="https://github.com/gustavo-Apps/JornadaMilhas-API-rec">Jornada Milhas API</a></li><li><a href="https://github.com/gustavo-Apps/DumpsManager">DumpsManager</a></li></ul>
+    </article>
+  </div>
+</section>
+
+<section id="learning">
+  <h2><span data-l="pt">Aprendendo agora</span><span data-l="en">Currently learning</span></h2>
+  <div class="card">
+    <ul data-l="pt"><li>Automação de testes de API e UI integrada ao pipeline de CI</li><li>Boas práticas de estrutura de testes automatizados (organização, reuso e manutenção)</li><li>Uso responsável de IA na validação de software</li></ul>
+    <ul data-l="en"><li>API and UI test automation integrated into the CI pipeline</li><li>Best practices for structuring automated tests (organization, reuse and maintenance)</li><li>Responsible use of AI in software validation</li></ul>
+  </div>
+  <h2 style="margin-top:36px"><span data-l="pt">Experiência e formação</span><span data-l="en">Experience and education</span></h2>
+  <div class="tl">
+    <p><b>Appelsoft</b><span data-l="pt">Analista de QA</span><span data-l="en">QA Analyst</span> <small>· <span data-l="pt">12/2024 até hoje</span><span data-l="en">12/2024 to present</span></small></p>
+    <p><b>Unicruz</b><span data-l="pt">Bacharelado em Ciência da Computação</span><span data-l="en">B.Sc. in Computer Science</span> <small>· <span data-l="pt">previsão 2º sem. 2027</span><span data-l="en">expected 2nd sem. 2027</span></small></p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2><span data-l="pt">Contato</span><span data-l="en">Contact</span></h2>
+  <p data-l="pt">Aberto a conversas sobre QA, automação de testes e oportunidades na área.</p>
+  <p data-l="en">Open to conversations about QA, test automation and opportunities in the field.</p>
+  <div class="cta">
+    <a class="btn p" href="https://www.linkedin.com/in/gustavo-r-gomes-40487a275">LinkedIn</a>
+    <a class="btn" href="mailto:mrrossato02@email.com">E-mail</a>
+    <a class="btn" href="https://github.com/gustavo-Apps">GitHub</a>
+  </div>
+</section>
+</main>
+<footer>© 2026 Gustavo Rossato Gomes</footer>
+
+<script>
+(function(){
+  var root=document.documentElement,saved=null;
+  try{saved=localStorage.getItem("lang")}catch(e){}
+  var lang=saved||((navigator.language||"pt").toLowerCase().indexOf("pt")===0?"pt":"en");
+  function set(l){
+    root.setAttribute("data-lang",l);
+    root.lang=l==="pt"?"pt-BR":"en";
+    try{localStorage.setItem("lang",l)}catch(e){}
+  }
+  set(lang);
+  document.querySelectorAll(".lang button").forEach(function(b){
+    b.addEventListener("click",function(){set(b.getAttribute("data-set"))});
+  });
+})();
+</script>
+</body>
+</html>
