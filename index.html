@@ -3,11 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gustavo Rossato Gomes | QA</title>
-<meta name="description" content="Analista de QA: testes manuais, API e automação E2E com Playwright.">
+<title>Gustavo Rossato Gomes | Analista de QA</title>
+<meta name="description" content="Analista de QA: testes manuais, API e automação E2E com Playwright e CI no GitHub Actions.">
+<meta name="author" content="Gustavo Rossato Gomes">
+<meta name="theme-color" content="#0f1419">
+<link rel="canonical" href="https://gustavo-apps.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1419'/%3E%3Ctext x='32' y='43' font-family='sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='%233fb68b'%3EGG%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gustavo Rossato Gomes">
+<meta property="og:title" content="Gustavo Rossato Gomes | Analista de QA">
+<meta property="og:description" content="Testes manuais, API e automação E2E com Playwright e CI no GitHub Actions.">
+<meta property="og:url" content="https://gustavo-apps.github.io/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://gustavo-apps.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gustavo Rossato Gomes, Analista de QA">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Gustavo Rossato Gomes","jobTitle":"Analista de QA","url":"https://gustavo-apps.github.io/","worksFor":{"@type":"Organization","name":"Appelsoft"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Unicruz"},"sameAs":["https://github.com/gustavo-Apps","https://www.linkedin.com/in/gustavo-r-gomes-40487a275"]}</script>
 <style>
-:root{--bg:#0f1419;--card:#171e26;--text:#e6edf3;--muted:#9aa7b4;--accent:#3fb68b;--line:#27313c}
-@media (prefers-color-scheme:light){:root{--bg:#f7f9fb;--card:#fff;--text:#15202b;--muted:#5b6b7a;--accent:#0f8a63;--line:#e1e7ed}}
+:root{--bg:#0f1419;--card:#171e26;--text:#e6edf3;--muted:#9aa7b4;--accent:#3fb68b;--on-accent:#0f1419;--line:#27313c}
+@media (prefers-color-scheme:light){:root{--bg:#f7f9fb;--card:#fff;--text:#15202b;--muted:#5b6b7a;--accent:#0a7552;--on-accent:#fff;--line:#e1e7ed}}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--on-accent);padding:8px 14px;border-radius:8px;z-index:20;font-weight:600}
+.skip:focus{left:8px;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
@@ -20,15 +40,16 @@ nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,
 .links a{color:var(--muted);font-size:.92rem}.links a:hover{color:var(--text);text-decoration:none}
 .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
 .lang button{background:none;border:0;color:var(--muted);padding:5px 12px;font:inherit;font-size:.85rem;cursor:pointer}
-html[data-lang="pt"] .lang [data-set="pt"],html[data-lang="en"] .lang [data-set="en"]{background:var(--accent);color:#fff}
+html[data-lang="pt"] .lang [data-set="pt"],html[data-lang="en"] .lang [data-set="en"]{background:var(--accent);color:var(--on-accent)}
 main{max-width:900px;margin:0 auto;padding:0 20px 60px}
 .hero{padding:72px 0 40px}
+.avatar{width:96px;height:96px;border-radius:50%;border:2px solid var(--accent);margin-bottom:20px;display:block;background:var(--card)}
 .hero h1{font-size:clamp(2rem,6vw,3.2rem);margin:0 0 6px;line-height:1.15}
 .role{color:var(--accent);font-weight:600;font-size:1.1rem;margin:0 0 18px}
 .hero p{max-width:680px;color:var(--muted);font-size:1.05rem}
 .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
 .btn{padding:9px 18px;border-radius:8px;border:1px solid var(--line);color:var(--text);font-weight:600;font-size:.95rem}
-.btn.p{background:var(--accent);border-color:var(--accent);color:#fff}.btn:hover{text-decoration:none;opacity:.9}
+.btn.p{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}.btn:hover{text-decoration:none;opacity:.9}
 section{padding-top:48px}
 h2{font-size:1.4rem;margin:0 0 18px;padding-bottom:8px;border-bottom:1px solid var(--line)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 18px}
@@ -45,7 +66,8 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 20px;b
 </style>
 </head>
 <body>
-<nav><div class="bar">
+<a class="skip" href="#main"><span data-l="pt">Ir para o conteúdo</span><span data-l="en">Skip to content</span></a>
+<nav aria-label="Principal"><div class="bar">
   <span class="logo">Gustavo R. Gomes</span>
   <div class="links">
     <a href="#about"><span data-l="pt">Sobre</span><span data-l="en">About</span></a>
@@ -57,8 +79,9 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 20px;b
   </div>
 </div></nav>
 
-<main>
+<main id="main">
 <header class="hero" id="top">
+  <img class="avatar" src="https://github.com/gustavo-Apps.png?size=192" width="96" height="96" alt="Foto de perfil de Gustavo Rossato Gomes" onerror="this.remove()">
   <h1>Gustavo Rossato Gomes</h1>
   <p class="role"><span data-l="pt">Analista de QA | Testes Manuais, API e Automação E2E</span><span data-l="en">QA Analyst | Manual, API and E2E Automation Testing</span></p>
   <p data-l="pt">Valido regras de negócio em sistemas desktop e web, testo APIs e integrações e trabalho com automação E2E em Playwright. Gosto de entender o fluxo completo, do requisito ao endpoint, para reportar bugs com contexto real.</p>
@@ -84,7 +107,9 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 20px;b
     <span data-l="pt">Testes de integração</span><span data-l="en">Integration testing</span>
     <span data-l="pt">Testes de regressão</span><span data-l="en">Regression testing</span>
     <span data-l="pt">Automação E2E</span><span data-l="en">E2E automation</span>
+    <span data-l="pt">Análise de regra de negócio</span><span data-l="en">Business rules analysis</span>
     <span data-l="pt">Casos de teste</span><span data-l="en">Test cases</span>
+    <span data-l="pt">Registro e rastreamento de bugs</span><span data-l="en">Bug reporting and tracking</span>
     <span data-l="pt">Validação de código gerado por IA</span><span data-l="en">AI-generated code validation</span>
   </div>
   <h3><span data-l="pt">Ferramentas</span><span data-l="en">Tools</span></h3>
@@ -98,6 +123,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 20px;b
   <div class="grid">
     <article class="card">
       <h4><a href="https://github.com/gustavo-Apps/task-manager">Task Manager</a></h4>
+      <p><a href="https://github.com/gustavo-Apps/task-manager/actions/workflows/ci.yml"><img src="https://github.com/gustavo-Apps/task-manager/actions/workflows/ci.yml/badge.svg" alt="Status do CI do Task Manager no GitHub Actions" height="20"></a></p>
       <p data-l="pt">Sistema full-stack de registro de atividades semanais.</p>
       <p data-l="en">Full-stack weekly activity logging system.</p>
       <ul data-l="pt"><li>Node.js/Express, Sequelize/MySQL, React, Vite e Tailwind</li><li>Autenticação JWT e painel administrativo</li><li>Integração com Azure DevOps</li><li>Relatórios em PDF e Markdown, com perfil para Analista de Testes</li><li>Testes E2E com Playwright e CI no GitHub Actions</li></ul>
@@ -109,6 +135,8 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 20px;b
       <p data-l="en">An iFood-style online ordering platform for small businesses, built to practice technology and testing.</p>
       <ul data-l="pt"><li>Testes automatizados E2E com Playwright</li></ul>
       <ul data-l="en"><li>Automated E2E tests with Playwright</li></ul>
+      <p data-l="pt"><small>Repositório privado por enquanto; uma versão pública pode vir depois.</small></p>
+      <p data-l="en"><small>Private repository for now; a public version may come later.</small></p>
     </article>
     <article class="card">
       <h4><span data-l="pt">Estudos em C#</span><span data-l="en">C# studies</span></h4>
@@ -128,6 +156,8 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 20px;b
   <h2 style="margin-top:36px"><span data-l="pt">Experiência e formação</span><span data-l="en">Experience and education</span></h2>
   <div class="tl">
     <p><b>Appelsoft</b><span data-l="pt">Analista de QA</span><span data-l="en">QA Analyst</span> <small>· <span data-l="pt">12/2024 até hoje</span><span data-l="en">12/2024 to present</span></small></p>
+    <ul data-l="pt"><li>Valido de 1 a 4 sistemas desktop e web por semana, incluindo integrações e dashboards</li><li>Busco ao menos um impacto colateral ou regressão em cada correção ou nova funcionalidade</li><li>Testo APIs com Postman (status codes, payloads e consistência entre serviços)</li><li>Registro evidências e mapeio cenários críticos por release</li></ul>
+    <ul data-l="en"><li>I validate 1 to 4 desktop and web systems per week, including integrations and dashboards</li><li>I look for at least one side effect or regression in every fix or new feature</li><li>I test APIs with Postman (status codes, payloads and consistency across services)</li><li>I record evidence and map critical scenarios per release</li></ul>
     <p><b>Unicruz</b><span data-l="pt">Bacharelado em Ciência da Computação</span><span data-l="en">B.Sc. in Computer Science</span> <small>· <span data-l="pt">previsão 2º sem. 2027</span><span data-l="en">expected 2nd sem. 2027</span></small></p>
   </div>
 </section>
@@ -159,6 +189,14 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 20px;b
   document.querySelectorAll(".lang button").forEach(function(b){
     b.addEventListener("click",function(){set(b.getAttribute("data-set"))});
   });
+  function pressed(){
+    var l=root.getAttribute("data-lang");
+    document.querySelectorAll(".lang button").forEach(function(b){
+      b.setAttribute("aria-pressed",b.getAttribute("data-set")===l?"true":"false");
+    });
+  }
+  pressed();
+  new MutationObserver(pressed).observe(root,{attributes:true,attributeFilter:["data-lang"]});
 })();
 </script>
 </body>
